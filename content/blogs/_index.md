@@ -3,4 +3,4 @@ title = "Blogs"
 slug = "blogs"
 +++
 
-No blogs yet!
+there will be blogs!
