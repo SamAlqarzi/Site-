@@ -1,0 +1,17 @@
+<!-- Get src param from shortcode -->
+{{ $src := $.Get "src"}}
+
+<!-- Get alt param from shortcode -->
+{{ $alt := $.Get "alt"}}
+
+<!-- Get image -->
+{{$img := resources.Get $src}}
+
+<!-- Resize image as a test it's working -->
+{{- $desktop := $img.Resize "600x"}}
+{{- $mobile := $img.Resize "400x"}}
+
+<picture>
+    <source media="(max-width:401px)" srcset="{{ $mobile.Permalink }}">
+    <img src="{{ $desktop.Permalink }}" alt="{{ $alt }}" style="width:auto;">
+</picture>

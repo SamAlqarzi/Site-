@@ -1,0 +1,16 @@
+<li>
+  <section class="cards-wrapper">
+     <div class="card-grid-space">
+          <a class = "card" href= "{{ .Params.externalLink | default .RelPermalink }}" style = "--bg-img: url({{ .Params.featured_image }})">
+             <div class = "card-content">
+               <h1>{{.Title}}</h1>
+               <p style = "color: white;">{{.Description }}</p>
+               <div class = "date">{{ dateFormat "January 2, 2006" .Date }}</div>
+               <div class="tags">
+                   <div class="tag"> Click to View Project </div>
+               </div>
+            </div>
+         </a>
+    </div>
+  </section>
+</li>
